@@ -1,0 +1,8 @@
+box: wercker/ruby
+build:
+    steps:
+        # Execute the bundle install step, a step provided by wercker
+        - bundle-install
+        - script:
+          - name: rake
+          - code: bundle exec rake test
